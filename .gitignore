@@ -1,0 +1,36 @@
+
+# Environnements virtuels
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Tests et cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Fichiers sensibles
+.env
+.env.*
+!.env.example
+
+# Données originales
+data/raw/*
+!data/raw/.gitkeep
+
+# Données préparées
+data/processed/*
+!data/processed/.gitkeep
+
+# Logs
+logs/*
+!logs/.gitkeep
+
+# Fichiers temporaires
+*.tmp
+.DS_Store
+Thumbs.db
