@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YouTube Sentiment Analyzer</title>
+
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <header class="header">
+
+        <div class="logo">SA</div>
+
+        <div class="brand">
+            <h1>Sentiment Analyzer</h1>
+            <p>YouTube Comment Analysis</p>
+        </div>
+
+        <button id="themeToggle" class="theme-button"
+                title="Changer le thème">
+            ☾
+        </button>
+
+    </header>
+
+    <div class="api-status">
+
+        <span id="statusDot" class="status-dot"></span>
+
+        <span id="apiStatus">
+            Vérification de l'API...
+        </span>
+
+    </div>
+
+    <button id="analyzeBtn" class="primary-button">
+        <span>✦</span>
+        Analyser les commentaires
+    </button>
+
+    <p id="message" class="message">
+        Ouvre une vidéo YouTube et charge ses commentaires.
+    </p>
+
+    <section id="results" hidden>
+
+        <div class="section-title">
+            <h2>Vue générale</h2>
+            <span id="totalComments">0 commentaires</span>
+        </div>
+
+        <div class="stats-grid">
+
+            <div class="stat-card negative">
+                <span>Négatifs</span>
+                <strong id="negativeCount">0</strong>
+                <small id="negativePercent">0%</small>
+            </div>
+
+            <div class="stat-card neutral">
+                <span>Neutres</span>
+                <strong id="neutralCount">0</strong>
+                <small id="neutralPercent">0%</small>
+            </div>
+
+            <div class="stat-card positive">
+                <span>Positifs</span>
+                <strong id="positiveCount">0</strong>
+                <small id="positivePercent">0%</small>
+            </div>
+
+        </div>
+
+        <div class="section-title">
+            <h2>Commentaires analysés</h2>
+        </div>
+
+        <div class="filters">
+
+            <button class="filter active" data-filter="all">
+                Tous
+            </button>
+
+            <button class="filter" data-filter="negative">
+                Négatifs
+            </button>
+
+            <button class="filter" data-filter="neutral">
+                Neutres
+            </button>
+
+            <button class="filter" data-filter="positive">
+                Positifs
+            </button>
+
+        </div>
+
+        <div id="resultsList" class="results-list"></div>
+
+        <button id="copyBtn" class="copy-button">
+            Copier les résultats
+        </button>
+
+        <p id="inferenceTime" class="inference-time"></p>
+
+    </section>
+
+</div>
+
+<script src="popup.js"></script>
+
+</body>
+</html>
