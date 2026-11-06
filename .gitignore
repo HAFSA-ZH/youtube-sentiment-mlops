@@ -34,3 +34,6 @@ logs/*
 *.tmp
 .DS_Store
 Thumbs.db
+# Modeles intermediaires
+models/*.joblib
+!models/sentiment_svm_pipeline.joblib

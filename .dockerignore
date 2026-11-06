@@ -1,0 +1,22 @@
+
+# Environnement Python
+.venv/
+venv/
+
+# Git
+.git/
+
+# Cache Python
+__pycache__/
+*.py[cod]
+
+# Données et rapports inutiles pour l'API
+data/
+reports/
+tests/
+chrome-extension/
+logs/
+
+# Modèles : conserver uniquement le SVM calibré
+models/*.joblib
+!models/sentiment_svm_pipeline.joblib
